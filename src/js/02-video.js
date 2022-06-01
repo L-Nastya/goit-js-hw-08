@@ -9,4 +9,4 @@ const onPlay = function (data) {
    localStorage.setItem("videoplayer-current-time", pauseTime);
     };
 player.on('timeupdate', throttle(onPlay, 1000));
-player.setCurrentTime(JSON.parse(localStorage.getItem("videoplayer-current-time")))
+player.setCurrentTime(JSON.parse(localStorage.getItem("videoplayer-current-time")) || 0)
